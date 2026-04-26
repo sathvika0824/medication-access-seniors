@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medication Access for Seniors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    nav {
+      background-color: #005fa3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1.5rem;
+      color: white;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #0077cc;
+    }
+
+    .emergency-btn {
+      background-color: #d9534f;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .book-btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Form specific */
+    .form-card {
+      display: block;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin: 0.5rem 0 0.8rem 0;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+
+    .submit-btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .inline-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .inline-row > * { flex: 1; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid #e6e9ec;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f7fb;
+      color: #034b7b;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      nav { padding: 0.5rem 0.75rem; }
+      nav ul { gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">MedAccess</div>
+    <ul>
+      <li><a href="#emergency">Emergency Call</a></li>
+      <li><a href="#schedule">Medicine Schedule</a></li>
+      <li><a href="#consultation">Next Consultation</a></li>
+      <li><a href="#volunteers">Volunteers</a></li>
+      <li><a href="#register">Register</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Improving Medication Access for Seniors</h1>
+  </header>
+
+  <main class="container">
+    <div id="emergency" class="card">
+      <h2>Emergency Call</h2>
+      <p>During emergencies, timely medical assistance can save lives. It's vital that seniors and caregivers have quick access to emergency support.</p>
+      <button class="emergency-btn" onclick="location.href='tel:+918639714684'">Call Emergency: +91 8639714684</button>
+    </div>
+
+    <div id="schedule" class="card">
+      <h2>Medicine Schedule</h2>
+      <p>Maintaining a consistent medication routine is crucial for managing chronic conditions. Example weekly schedule:</p>
+      <ul>
+        <li>Monday – Aspirin 75mg</li>
+        <li>Tuesday – Metformin 500mg</li>
+        <li>Wednesday – Atorvastatin 10mg</li>
+        <li>Thursday – Lisinopril 5mg</li>
+        <li>Friday – Levothyroxine 50mcg</li>
+        <li>Saturday – Amlodipine 5mg</li>
+        <li>Sunday – Vitamin D3</li>
+      </ul>
+    </div>
+
+    <div id="consultation" class="card">
+      <h2>Next Consultation</h2>
+      <p>Schedule follow-ups to ensure continuous care.</p>
+      <label for="consultation-date">Select Date:</label>
+      <input type="date" id="consultation-date" name="consultation-date">
+      <button class="book-btn" onclick="bookConsultation()">Book Consultation</button>
+    </div>
+
+    <!-- Patient registration form -->
+    <div id="register" class="card form-card">
+      <h2>Register Senior Patient</h2>
+      <p>Collect basic patient details so volunteers and staff can follow up.</p>
+
+      <form id="patientForm" aria-label="Register Senior Patient">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Full Name" required>
+
+        <div class="inline-row">
+          <div>
+            <label for="age">Age</label>
+            <input id="age" name="age" type="number" min="0" placeholder="Age" required>
+          </div>
+          <div>
+            <label for="bloodGroup">Blood Group</label>
+            <select id="bloodGroup" name="bloodGroup" required>
+              <option value="">Select Blood Group</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="contact">Contact Number</label>
+        <input id="contact" name="contact" type="tel" placeholder="Phone or caregiver contact" required>
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="2" placeholder="Address, village, city, PIN" required></textarea>
+
+        <label for="notes">Health / Medication Notes (optional)</label>
+        <textarea id="notes" name="notes" rows="2" placeholder="Allergies, existing conditions, current meds"></textarea>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+
+      <div id="formMessage" style="margin-top:0.8rem;color:#444;font-size:0.95rem;"></div>
+    </div>
+
+    <div class="card">
+      <h2>Subsidized Medication Programs</h2>
+      <p>NGOs and government initiatives help reduce medication costs. Volunteers can connect eligible seniors to these programs.</p>
+      <ul>
+        <li>Helping Hands Foundation</li>
+        <li>Care4Seniors Initiative</li>
+        <li>Global Health Relief</li>
+        <li>PharmaAid Network</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Home Prescription Delivery</h2>
+      <p>Home delivery helps seniors who live far from pharmacies. Volunteers can help coordinate deliveries.</p>
+    </div>
+
+    <div class="card">
+      <h2>Digital Pill Reminders</h2>
+      <p>Apps and pill dispensers can be used to reduce missed doses and overdosing risk.</p>
+    </div>
+
+    <div class="card">
+      <h2>Medication Reviews</h2>
+      <p>Regular reviews by pharmacists or doctors reduce harmful interactions and focus on necessary medications only.</p>
+    </div>
+
+    <div class="card">
+      <h2>Local Support Networks</h2>
+      <p>Community health workers and volunteers can assist with prescriptions, pillboxes, and interpreting instructions.</p>
+    </div>
+
+    <div id="volunteers" class="card">
+      <h2>List of Volunteers</h2>
+      <ul>
+        <li>kusuma – 9346348778</li>
+        <li>joshna – 7001888982</li>
+        <li>laxmi – 8019176858</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Registered Patients</h2>
+      <p>All patient entries collected via the registration form.</p>
+      <div style="overflow:auto;">
+        <table id="patientsTable" aria-label="Registered patients table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Blood Group</th>
+              <th>Contact</th>
+              <th>Address</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Medication Access Initiative</p>
+  </footer>
+
+  <script>
+const API = "http://localhost:3000/api/patients";
+
+document.getElementById("patientForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const patient = {
+    name: document.getElementById("name").value.trim(),
+    age: document.getElementById("age").value.trim(),
+    bloodGroup: document.getElementById("bloodGroup").value.trim(),
+    contact: document.getElementById("contact").value.trim(),
+    address: document.getElementById("address").value.trim(),
+    notes: document.getElementById("notes").value.trim()
+  };
+
+  try {
+    const res = await fetch(API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(patient)
+    });
+
+    if (res.ok) {
+      console.log("✅ Patient added successfully");
+      await loadPatients(); // reload the table
+      e.target.reset();     // clear form
+    } else {
+      console.error("❌ Failed to save");
+    }
+  } catch (err) {
+    console.error("Error:", err);
+  }
+});
+
+async function loadPatients() {
+  try {
+    const res = await fetch(API);
+    const patients = await res.json();
+    const tbody = document.querySelector("#patientsTable tbody");
+    tbody.innerHTML = "";
+
+    if (patients.length === 0) {
+      tbody.innerHTML = "<tr><td colspan='6'>No patients yet</td></tr>";
+      return;
+    }
+
+    patients.forEach(p => {
+      const row = `<tr>
+        <td>${p.name}</td>
+        <td>${p.age}</td>
+        <td>${p.bloodGroup}</td>
+        <td>${p.contact}</td>
+        <td>${p.address}</td>
+        <td>${p.notes}</td>
+      </tr>`;
+      tbody.insertAdjacentHTML("beforeend", row);
+    });
+  } catch (err) {
+    console.error("Error loading patients:", err);
+  }
+}
+
+loadPatients();
+</script>
+
+</body>
+</html>

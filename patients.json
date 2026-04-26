@@ -1,0 +1,34 @@
+[
+  {
+    "name": "joseph",
+    "age": "69",
+    "bloodGroup": "B+",
+    "contact": "5674939902",
+    "address": "9-50,thanam,paravada,gajuwaka,567834",
+    "notes": "high blood sugar"
+  },
+  {
+    "name": "mickel",
+    "age": "89",
+    "bloodGroup": "A+",
+    "contact": "7890568390",
+    "address": "811,thanam,paravada,gajuwaka",
+    "notes": "heart disease"
+  },
+  {
+    "name": "joshna",
+    "age": "90",
+    "bloodGroup": "AB-",
+    "contact": "9963768389",
+    "address": "8.90,thanam village,gajuwaka",
+    "notes": "allergitic to dust"
+  },
+  {
+    "name": "nancy",
+    "age": "66",
+    "bloodGroup": "O+",
+    "contact": "7895364726",
+    "address": "555,thanam village,paravada,gajuwaka",
+    "notes": "chronic illness"
+  }
+]

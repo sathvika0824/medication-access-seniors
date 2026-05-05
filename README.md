@@ -1,30 +1,34 @@
 # 🏥 Medication Access for Seniors
 
-## What is this project?
-A web application designed to improve medication access for elderly individuals by connecting them with volunteers and healthcare resources.
+A full-stack healthcare web application connecting elderly patients with volunteers for real-time medication assistance! 💊❤️
 
-## Features
-- 🚨 Emergency Call Button for immediate assistance
-- 💊 Weekly Medicine Schedule tracker
-- 📅 Consultation Booking system
-- 👤 Senior Patient Registration form
-- 🤝 Volunteer List for community support
-- 🏠 Home Prescription Delivery information
-- 💰 Subsidized Medication Programs directory
+## ✨ Features
+- 🚨 **Emergency Call Button** — immediate assistance at one click
+- 💊 **Weekly Medicine Schedule** — track medications easily
+- 📅 **Next Consultation** — book doctor consultations
+- 👤 **Patient Registration** — register with blood group, age, health notes
+- 🤝 **Volunteer Connect** — community volunteers with contact details
+- 🏠 **Local Support Networks** — community health workers
+- 💰 **Subsidized Medication Programs** — affordable medicine directory
 
-## Technologies Used
-- HTML, CSS, JavaScript (Frontend)
-- Node.js, Express.js (Backend)
-- JSON file storage (Database)
+## 📸 Demo
+![App Demo](Screenshot%20(281).png)
 
-## How to run
-1. Clone this repository
-2. Run: npm install
-3. Run: node server.js
-4. Open browser and go to: http://localhost:3000
+## 🛠️ Tech Stack
+- HTML, CSS, JavaScript 🎨 (Frontend)
+- Node.js, Express.js ⚙️ (Backend)
+- JSON file storage 🗄️ (Database)
 
-## Purpose
-This project was built as a community service initiative to help elderly patients with heart conditions get timely access to medications through volunteer support networks.
+## 🚀 How to Run
+```bash
+git clone https://github.com/sathvika0824/medication-access-seniors
+cd medication-access-seniors
+npm install
+node server.js
+```
+Open browser: **http://localhost:3000**
 
-## Author
-Sathvika
+## 👩‍💻 Developer
+**Kameswari Sathvika Bhallamudi**
+- 🔗 LinkedIn: linkedin.com/in/sathvika-aiml
+- 💻 GitHub: github.com/sathvika0824
